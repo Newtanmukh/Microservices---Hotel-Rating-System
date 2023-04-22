@@ -1,0 +1,20 @@
+API Gateway,
+any request made, first will come to the API Gateway.
+from API Gateway, the request will go to the three services.
+Each service will have its own database.
+all configuration will be deployed somewhere on the github. incase repeating, it will be picked up from the github.
+via OKTA Auth., we can do authentiation to the services. if the client is authenticated, then only will be able to use the services.
+all the services will be registered in a service registry.
+so if any service up or down, we will get to know the same in the service registry. 
+also if the services get registered, we will be able to call it via their names.
+
+The request will first come to the user service. 
+from there, it will fetch all the ratings belonging to that user.
+then, all the hotels associated with those ratings and all this data will go back to the client.
+
+user, which ratings to that user and for each of the rating, which hotel does one rating belong to.
+
+the @Transient annotation in the Entities will basically ignore that particular field and will then save the rest of the stuff into the database.
+
+
+
